@@ -11,11 +11,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.dto.CategoryDTO;
 import com.dto.UserDTO;
@@ -29,7 +28,8 @@ import com.serviceImpl.AdminServiceImpl;
 import com.serviceImpl.CategoryServiceImpl;
 import com.serviceImpl.CustomerServiceImpl;
 
-@RunWith(MockitoJUnitRunner.class)
+
+@ExtendWith(MockitoExtension.class)
 @SpringBootTest
 class PizzaBokkingAppApplicationTests {
 
