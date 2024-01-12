@@ -49,7 +49,7 @@ class PizzaBokkingAppApplicationTests {
 	@Mock
 	AdminRepository adminRepository;
 
-	@Disabled
+	
 	@Test
 	public void getCustomersTest() {
 		when(customerRepository.findAll()).thenReturn(Stream
@@ -58,7 +58,7 @@ class PizzaBokkingAppApplicationTests {
 				.collect(Collectors.toList()));
 		assertEquals(2, customerServiceImpl.readAllCustomers().size());
 	}
-	@Disabled
+	
 	@Test
 	public void addCustomerTest() {
 		CustomerEntity customer = new CustomerEntity(3, "pqw", "123", "SE", "xyz", "wwr@email", (long) 123, "AP");
@@ -71,7 +71,7 @@ class PizzaBokkingAppApplicationTests {
 		assertEquals(reuserDTO.getId(), customer.getId());
 
 	}
-	@Disabled
+	
 	@Test
 	public void deleteCustomerTest() {
 
@@ -82,7 +82,7 @@ class PizzaBokkingAppApplicationTests {
 		verify(customerRepository, times(1)).deleteById(99);
 
 	}
-	@Disabled
+	
 	@Test
 	public void addCategoryTest() {
 		Category category = new Category(3, "pqw");
@@ -93,7 +93,7 @@ class PizzaBokkingAppApplicationTests {
 		assertEquals(recategoryDTO.getCategoryName(), category.getCategoryName());
 
 	}
-	@Disabled
+	
 	@Test
 	public void deleteCategoryTest() {
 
@@ -107,7 +107,7 @@ class PizzaBokkingAppApplicationTests {
 		verify(categoryRepository, times(1)).deleteById(99);
 
 	}
-	@Disabled
+	
 	@Test
 	public void findByCategoryIdTest() {
 		Category category = new Category(3, "pqw");
@@ -117,7 +117,7 @@ class PizzaBokkingAppApplicationTests {
 		assertEquals(recategoryDTO.getCategoryName(), category.getCategoryName());
 
 	}
-	@Disabled
+	
 	@Test
 	public void findByCategoryNameTest() {
 		Category category = new Category(3, "pqw");
@@ -127,7 +127,7 @@ class PizzaBokkingAppApplicationTests {
 		assertEquals(recategoryDTO.getCategoryName(), category.getCategoryName());
 
 	}
-	@Disabled
+	
 	@Test
 	public void addAdminTest() {
 		AdminEntity admin = new AdminEntity(3, "pqw", "123", "SE", "xyz", "wwr@email", (long) 123, "AP");
@@ -140,7 +140,7 @@ class PizzaBokkingAppApplicationTests {
 		assertEquals(reuserDTO.getId(), admin.getId());
 
 	}
-	@Disabled
+	
 	@Test
 	public void findAdminByEmailTest() {
 		AdminEntity admin = new AdminEntity(3, "pqw", "123", "SE", "xyz", "wwr@email", (long) 123, "AP");
