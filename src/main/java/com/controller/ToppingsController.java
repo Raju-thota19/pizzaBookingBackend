@@ -22,6 +22,11 @@ public class ToppingsController {
 	@Autowired
 	private ToppingsServiceImpl toppingsServiceImpl;
 
+	@GetMapping("/welcome")
+	public String welcome (){
+		return "Hello Raju";
+	}
+
 	@PostMapping("/addToppings")
 	public ToppingsDTO addNewToppings(@Valid @RequestBody ToppingsDTO toppingsDTO) {
 		return toppingsServiceImpl.addToppings(toppingsDTO);
